@@ -18,19 +18,7 @@ client.on ("message", (message) => {
 	if(message.author.bot) return;
 	
 	var data = new Date();
-	var hora = data.getHours();
-	
-	if(hora >= 2 && hora <=23 && message.content !== 'zack ta puto'){
-		if(flag == 0){
-			message.channel.send("<@87590108299001856> Jabolo! Jabolo! https://www.youtube.com/watch?v=yAmrvQFqZy8");
-		}
-		flag = 1;
-	}
-	
-	if((hora >= 0 && hora < 6) && flag == 1){
-		flag = 0;
-	}
-	
+	var hora = data.getHours();	
 	
 	if (message.content === 'ping') {
 		message.reply('pong');
