@@ -4,33 +4,53 @@ var client = new discord.Client();
 
 var flag = 0;
 var numero = 0;
+var prefix = "!";
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 client.on ("ready", () => {
 	console.log ("I am ready!");
 	
-	client.user.setPresence({ game: { name: 'Jogando com o Willy', type: 0 } });
+	client.user.setPresence({ game: { name: 'ROBERTO', type: 0 } });
 });
-
-
 
 client.on ("message", (message) => {
 	if(message.author.bot) return;
 	
 	var data = new Date();
 	var hora = data.getHours();
+	var rand;
 	
 	if (message.content === 'ping') {
 		message.reply('pong');
 	}
 	
-	if (message.content === "zack ta puto") {
+	if (message.content === prefix + "zackputo") {
 		numero++;
 		if(numero == 1){
-			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  "vez) https://www.youtube.com/watch?v=yAmrvQFqZy8");
+			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  " vez) https://www.youtube.com/watch?v=yAmrvQFqZy8");
 		}
 		else{
-			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  "vezes!) https://www.youtube.com/watch?v=yAmrvQFqZy8");
+			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  " vezes!) https://www.youtube.com/watch?v=yAmrvQFqZy8");
 		}
+	}
+	
+	if (message.content === prefix + "tiltazack"){
+		rand = getRandomIntInclusive(1,2);
+		switch(rand){
+			case 1:
+				message.channel.send("https://youtu.be/akT9oPY3OPQ");
+				break;
+			case 2:
+				message.channel.send("https://febracis.com/");
+				break;
+		}
+		
+		
 	}
 	
 	if (message.content.includes ("rola")){
