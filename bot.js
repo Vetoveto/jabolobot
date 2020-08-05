@@ -3,6 +3,8 @@ const discord = require ('discord.js');
 var client = new discord.Client();
 
 var flag = 0;
+var numero = 0;
+var plu = "es";
 
 client.on ("ready", () => {
 	console.log ("I am ready!");
@@ -38,8 +40,14 @@ client.on ("message", (message) => {
 		message.channel.send(flag);
 	}
 	
-	if (message.content === 'pai do shikamaru') {
-		message.channel.send(flag);
+	if (message.content === 'zack ta puto') {
+		numero++;
+		if(numero == 1)
+			message.channel.send("Jabolo! Jabolo! (Atenção, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto )" + numero +  "vez https://www.youtube.com/watch?v=yAmrvQFqZy8");
+		}
+		else{
+			message.channel.send("Jabolo! Jabolo! (Atenção, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto )" + numero +  "vez" + plu + " https://www.youtube.com/watch?v=yAmrvQFqZy8");
+		}
 	}
 	
 	if (message.content.includes ("rola")){
