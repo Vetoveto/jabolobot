@@ -39,18 +39,26 @@ client.on ("message", (message) => {
 		}
 	}
 	
+	if (message.content === prefix + "zackputa") {
+		numero++;
+		if(numero == 1){
+			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  " vez) https://www.youtube.com/watch?v=yAmrvQFqZy8");
+		}
+		else{
+			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  " vezes!) https://www.youtube.com/watch?v=yAmrvQFqZy8");
+		}
+	}
+	
 	if (message.content === prefix + "tiltazack"){
-		rand = getRandomIntInclusive(1,2);
+		rand = Math.random();
 		switch(rand){
-			case 1:
+			case 0:
 				message.channel.send("https://youtu.be/akT9oPY3OPQ");
 				break;
-			case 2:
+			case 1:
 				message.channel.send("https://febracis.com/");
 				break;
 		}
-		
-		
 	}
 	
 	if (message.content.includes ("rola")){
