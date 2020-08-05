@@ -50,7 +50,7 @@ client.on ("message", (message) => {
 	}
 	
 	if (message.content === prefix + "tiltazack"){
-		rand = getRandomIntInclusive(1, 2);
+		rand = getRandomIntInclusive(1, 5);
 		switch(rand){
 			case 1:
 				message.channel.send("https://youtu.be/akT9oPY3OPQ");
@@ -58,6 +58,15 @@ client.on ("message", (message) => {
 			case 2:
 				message.channel.send("https://febracis.com/");
 				break;
+			case 3:
+				message.channel.send("https://www.youtube.com/watch?v=HVOpiQPVbmo");
+				break;
+			case 4:
+				message.channel.send("PARA JULIANA!");
+				break;
+			case 5:
+				message.channel.send("https://www.youtube.com/watch?v=iESXSXCGxSM");
+				
 		}
 	}
 	
