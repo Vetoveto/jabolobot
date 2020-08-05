@@ -20,7 +20,7 @@ client.on ("message", (message) => {
 	var data = new Date();
 	var hora = data.getHours();
 	
-	if(hora >= 2 && hora <=23){
+	if(hora >= 2 && hora <=23 && message.content !== 'zack ta puto'){
 		if(flag == 0){
 			message.channel.send("<@87590108299001856> Jabolo! Jabolo! https://www.youtube.com/watch?v=yAmrvQFqZy8");
 		}
@@ -43,10 +43,10 @@ client.on ("message", (message) => {
 	if (message.content === 'zack ta puto') {
 		numero++;
 		if(numero == 1){
-			message.channel.send("Jabolo! Jabolo! (Atenção, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto )" + numero +  "vez https://www.youtube.com/watch?v=yAmrvQFqZy8");
+			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  "vez) https://www.youtube.com/watch?v=yAmrvQFqZy8");
 		}
 		else{
-			message.channel.send("Jabolo! Jabolo! (Atenção, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto )" + numero +  "vezes https://www.youtube.com/watch?v=yAmrvQFqZy8");
+			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  "vezes!) https://www.youtube.com/watch?v=yAmrvQFqZy8");
 		}
 	}
 	
