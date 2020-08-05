@@ -18,14 +18,14 @@ client.on ("message", (message) => {
 	var data = new Date();
 	var hora = data.getHours();
 	
-	if(hora >= 6 && hora<=18){
+	if(hora >= 2 && hora <=23){
 		if(flag == 0){
-			message.channel.send("Jabolô! Jabolô! https://www.youtube.com/watch?v=yAmrvQFqZy8");
+			message.channel.send("<@87590108299001856> Jabolô! Jabolô! https://www.youtube.com/watch?v=yAmrvQFqZy8");
 		}
 		flag = 1;
 	}
 	
-	if(hora >= 0 && hora < 9 || hora > 15){
+	if((hora >= 0 && hora < 6 || hora > 18) && flag == 1){
 		flag = 0;
 	}
 	
