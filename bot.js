@@ -4,7 +4,6 @@ var client = new discord.Client();
 
 var flag = 0;
 var numero = 0;
-var plu = "es";
 
 client.on ("ready", () => {
 	console.log ("I am ready!");
@@ -18,17 +17,13 @@ client.on ("message", (message) => {
 	if(message.author.bot) return;
 	
 	var data = new Date();
-	var hora = data.getHours();	
+	var hora = data.getHours();
 	
 	if (message.content === 'ping') {
 		message.reply('pong');
 	}
 	
-	if (message.content === 'flag') {
-		message.channel.send(flag);
-	}
-	
-	if (message.content === 'zack ta puto') {
+	if (message.content === "zack ta puto") {
 		numero++;
 		if(numero == 1){
 			message.channel.send("Jabolo! Jabolo! (Atencao, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto " + numero +  "vez) https://www.youtube.com/watch?v=yAmrvQFqZy8");
