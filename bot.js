@@ -38,6 +38,10 @@ client.on ("message", (message) => {
 		message.channel.send(flag);
 	}
 	
+	if (message.content === 'pai do shikamaru') {
+		message.channel.send(flag);
+	}
+	
 	if (message.content.includes ("rola")){
 		setTimeout(function(){
 			message.react('🇷');
