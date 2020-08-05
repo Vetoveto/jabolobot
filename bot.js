@@ -42,11 +42,11 @@ client.on ("message", (message) => {
 	
 	if (message.content === 'zack ta puto') {
 		numero++;
-		if(numero == 1)
+		if(numero == 1){
 			message.channel.send("Jabolo! Jabolo! (Atenção, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto )" + numero +  "vez https://www.youtube.com/watch?v=yAmrvQFqZy8");
 		}
 		else{
-			message.channel.send("Jabolo! Jabolo! (Atenção, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto )" + numero +  "vez" + plu + " https://www.youtube.com/watch?v=yAmrvQFqZy8");
+			message.channel.send("Jabolo! Jabolo! (Atenção, desde o ultimo reset o nosso querido <@234853777901879297> ficou puto )" + numero +  "vezes https://www.youtube.com/watch?v=yAmrvQFqZy8");
 		}
 	}
 	
